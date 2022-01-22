@@ -1,5 +1,8 @@
 #include <QApplication>
 #include "spek-spectrogram.h"
+#include <fstream>
+#include <QIcon> 
+#include <QString> 
 
 int main(int argc, char *argv[])
 {
@@ -8,7 +11,12 @@ int main(int argc, char *argv[])
     SpekSpectrogram w;
     w.show();
 
-    w.open("F:\\KuGou\\J.Fla - Shape Of You.mp3");
+    if(argc < 2) return 0 ;
+    std::ifstream file(argv[1]);
+    w.open(argv[1]);
+    
+    w.setWindowIcon(QIcon::fromTheme("spek"));
+    w.setWindowTitle(QString("Qt-Spek"));
 
     return a.exec();
 }
