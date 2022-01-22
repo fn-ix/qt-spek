@@ -1,7 +1,11 @@
-# qt-spek
-基于Qt的频谱分析器
+<div>
+  <img align="right" src="spek.svg" width="54px" alt="logo"/>
+  <h2>Qt-Spek</h2>
+</div>
 
-修改于Spek[官网地址](http://spek.cc), [Github仓库地址](https://github.com/alexkay/spek)
+- Added the ability to read files as command-line arguments (it previously looked at a single, static location).
+- Will show a custom icon if one named `spek` exists according to the [Icon Theme Specification](https://www.freedesktop.org/wiki/Specifications/icon-theme-spec/) (e.g. `/usr/share/icons/hicolor/scalable/apps/spek.svg`).
 
-![0](https://github.com/Greedysky/qt-spek/blob/master/demo.jpg?raw=true)
-![1](https://github.com/Greedysky/qt-spek/blob/master/demo2.jpg?raw=true)
+Build with `qmake -makefile && make`.
+
+<img src="https://user-images.githubusercontent.com/16854594/150613717-a0f3faff-a4af-4931-9761-914bee1ce204.png" width="500"/>
